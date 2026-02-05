@@ -1,0 +1,107 @@
+Recursion
+- function that calls itself
+
+void f1(int n)
+
+recursion and loops do the same thing fundementaly
+
+Rucursion is loops using only method calls
+any recusrson algeratum can be converted to a loop
+Recursive and iterative
+
+iterative 
+- simple to undertand
+- more control
+- easyer to debug
+
+Recursion
+- Problems that are inhrently recussive
+  * family tree - 2*n generations
+- devide and concore 
+- Simplicity of code
+
+
+maze solver
+- try to go left
+- repeat in every location
+
+- withought recursion requires a while loop
+
+Divide and concore
+- base case (concore)
+  so simplified you no longer need nd answer
+- recursive case (devide)
+  A case where you call recursivly with a simplified sub problem
+
+Serch list for a value
+- (Subtask 1) serch 1st half of the list
+- (Subtask 2) serch second half of the list
+
+base case 1) we found the word
+base case 2) run out of places to serch
+
+
+Maze cases
+- Bace cases
+at NxN
+dead end
+checked all posible locatiins
+ returned to 1,1 with no new paths
+
+
+-recursive cases
+are we at the end 
+mark previus square is visited
+deturmine next step
+  - next row same collum 
+
+other group notes
+When the y,x position reaches (n,n) then the maze completed its path
+If the maze can't move, try to look for different indexes/pathways to move until finding the exit (n,n)
+If maze surrounded by 1s, then there is no pathway to move onto
+When you reach (n,n), if it is a 1 then there's no exit, unless (n,n) is a 0
+If the given maze had other numbers other than 0s and 1s then it would exit
+
+Recursive
+
+Marking down the pathway, keeping a track of where it has passed before
+Looking for different paths to move on to until reaching the exit
+-When there are more zeros to search and there is an unsearched zero adjacent (move to the next zero)
+-When there are more zeros to serach and there is not an unserached zero adjacent (backtracking)
+
+
+prof notes
+bace case
+- Reached n,n
+- 2 dead end
+- exit not posible
+- the start it a wall (if 1x1 is "1")
+- prevent out of bounds
+
+recursive 
+- move left [x-1] [y]
+- move down [x] [y + 1]
+- move right [x +1] [y]
+- move up [x] [y - 1]
+
+
+Head recursion 
+- recursive call is first step in the function
+  if n > 0 
+    f(n-i)
+    print(n)
+
+tail recursion (prefered)
+  if n >0:
+    print(n)
+    f(n-1)
+- can easly be converted to a more efficient solution
+- while int -x 
+- or while (true) can be infinite withought crashing
+- if recursion uses to much call stack cose will crash 
+
+Tree recursion
+- multiple recursive calls in the same function
+- at eatch level you get more recursive calls
+- can easly result in stack overflow with less levels
+
